@@ -27,7 +27,7 @@ pipeline {
                 sh 'mvn -s settings.xml -DskipTests install'
             }
             post {
-                succes {
+                success {
                     echo "Now Archiving."
                     archiveArtifacts artifacts: '**/*.war'
                 }
